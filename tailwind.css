@@ -6,7 +6,7 @@
 
 @layer base{
     body{
-        @apply font-body
+        @apply font-body bg-body
     }
 }
 
@@ -14,4 +14,39 @@
     .btn{
         @apply px-10 py-3 font-semibold text-white uppercase bg-primary-dark font-body;
     }
+    /* Start Header css */
+    .header-top-wrapper{
+        @apply bg-primary-dark p-1.5; 
+    }
+    .header-top{
+        @apply grid grid-cols-3 gap-4 items-center;
+    }
+    .header-top li{
+        @apply flex items-center space-x-2 text-base tracking-widest leading-6 text-white;
+    }
+    .header-top li img{
+        @apply flex-shrink-0 max-h-4;
+    }
+    .header-middle-navigation{
+        @apply flex items-center justify-end py-6 space-x-8
+    }
+    .header-middle-navigation ul{
+        @apply flex space-x-5 items-center
+    }
+    .header-middle-navigation ul img{
+        @apply inline-block max-h-4
+    }
+    .header-middle-navigation li a{
+        @apply text-gray-700 uppercase hover:text-primary-dark text-base tracking-widest leading-6;
+    }
+    .header-bottom-wrapper{
+        @apply border-t border-gray-300;
+    }
+    .header-main-navigation{
+        @apply flex space-x-5 items-center justify-between list-none;
+    }
+    .header-main-navigation li a{
+        @apply py-4 block text-gray-700 hover:text-primary-dark text-base tracking-widest leading-6;
+    }
+    /* End Header css */
 }

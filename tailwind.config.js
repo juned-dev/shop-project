@@ -14,7 +14,9 @@ module.exports = {
       },
 
       container:{
-        DEFAULT: '1420px',
+        screens: {
+          DEFAULT: '1420px',
+        },
         center: true,
         padding: '1rem'
       },
@@ -23,7 +25,13 @@ module.exports = {
         primary:{
           dark: '#59A13A',
           light: '#74D44C',
-        }
+        },
+        gray:{
+          '300': '#D8D8D8',
+          '700': '#3A3A3A',
+        },
+        body: '#ffffff',
+
       }
     },
   },
