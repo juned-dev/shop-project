@@ -8,6 +8,9 @@
     body{
         @apply font-body bg-body
     }
+    .section-title{
+        @apply mb-10 text-4xl tracking-wider text-gray-800 font-title;
+    }
 }
 
 @layer components{
@@ -19,34 +22,72 @@
         @apply bg-primary-dark p-1.5; 
     }
     .header-top{
-        @apply grid grid-cols-3 gap-4 items-center;
+        @apply grid items-center grid-cols-3 gap-4;
     }
     .header-top li{
-        @apply flex items-center space-x-2 text-base tracking-widest leading-6 text-white;
+        @apply flex items-center space-x-2 text-base leading-6 tracking-widest text-white;
+    }
+    .header-top li:nth-child(2){
+        @apply justify-center mr-16;
+    }
+    .header-top li:last-child{
+        @apply justify-end ml-auto mr-0;
     }
     .header-top li img{
         @apply flex-shrink-0 max-h-4;
     }
     .header-middle-navigation{
-        @apply flex items-center justify-end py-6 space-x-8
+        @apply flex items-center justify-end py-6 space-x-16
     }
     .header-middle-navigation ul{
-        @apply flex space-x-5 items-center
+        @apply flex space-x-8 items-center
     }
     .header-middle-navigation ul img{
         @apply inline-block max-h-4
     }
     .header-middle-navigation li a{
-        @apply text-gray-700 uppercase hover:text-primary-dark text-base tracking-widest leading-6;
+        @apply text-base leading-6 tracking-widest text-gray-700 uppercase hover:text-primary-dark;
+    }
+    .header-middle-right li img{
+        @apply max-h-6
     }
     .header-bottom-wrapper{
         @apply border-t border-gray-300;
     }
     .header-main-navigation{
-        @apply flex space-x-5 items-center justify-between list-none;
+        @apply flex items-center justify-between space-x-5 list-none;
     }
     .header-main-navigation li a{
-        @apply py-4 block text-gray-700 hover:text-primary-dark text-base tracking-widest leading-6;
+        @apply block py-4 text-base leading-6 tracking-widest text-gray-700 hover:text-primary-dark;
     }
     /* End Header css */
+
+    .know-from-brands{
+        @apply grid grid-cols-5 gap-4;
+    }
+    .know-from-brands img{
+        @apply mx-auto max-h-20;
+    }
+
+    .our-service-section{
+        @apply bg-primary-dark
+    }
+    .our-service-section .section-title{
+        @apply text-white mb-14
+    }
+    .our-service-wrapper{
+        @apply grid grid-cols-3 gap-4;
+    }
+    .our-service-block{
+        @apply max-w-[400px] mx-auto text-center;
+    }
+    .our-service-block img{
+        @apply mx-auto mb-8 max-h-10;
+    }
+    .our-service-block h3{
+        @apply mb-5 text-2xl font-semibold text-white;
+    }
+    .our-service-block p{
+        @apply text-xl text-white;
+    }
 }
