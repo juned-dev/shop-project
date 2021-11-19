@@ -76,7 +76,7 @@
     }
 
     .best-sellers-wrapper{
-        @apply grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4;
+        @apply grid grid-cols-2 gap-2 sm:gap-5 md:grid-cols-4;
     }
     .best-sellers-section .section-title{
         @apply mb-14;
@@ -88,7 +88,7 @@
         @apply max-h-[26rem];
     }
     .best-sellers-block h4{
-        @apply text-[1.375rem] leading-[1.75rem] text-center text-gray-800;
+        @apply text-base sm:text-[1.375rem] leading-[1.75rem] text-center text-gray-800;
     }
     .best-sellers-block h5{
         @apply text-[1.125rem] leading-[1.75rem] text-center text-gray-800 mt-3;
@@ -100,11 +100,27 @@
         @apply text-xs text-yellow-600;
     }
 
+    .hp-categories-wrapper{
+       @apply grid grid-cols-2 gap-2 md:gap-5 md:grid-cols-3;
+    }
+    .hp-categories-block{
+        @apply relative overflow-hidden;
+    }
+    .hp-categories-block a{
+        @apply block;
+    }
+    .hp-categories-block img{
+        @apply max-h-[16.25rem] transition-all duration-300 transform hover:scale-110;
+    }
+    .hp-categories-block h3{
+        @apply text-xl sm:text-[2rem] leading-[2.375rem] text-white absolute left-6 bottom-5;
+    }
+
     .our-service-section{
-        @apply bg-primary-dark
+        @apply bg-primary-dark;
     }
     .our-service-section .section-title{
-        @apply text-white mb-14
+        @apply text-white mb-14;
     }
     .our-service-wrapper{
         @apply grid grid-cols-1 gap-4 md:grid-cols-3;

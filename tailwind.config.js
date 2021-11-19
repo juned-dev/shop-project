@@ -37,6 +37,7 @@ module.exports = {
           '800': '#403E3F',
         },
         yellow:{
+          '400': 'rgba(255,218,107,0.20)',
           '600': '#D6AC75',
         },
         body: '#ffffff',
