@@ -6,8 +6,13 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    
     extend: {
 
+      fontSize: {
+        'tiny': '.938rem',
+      },
+      
       fontFamily:{
         'title' : ['"Bebas Neue", sans-serif'],
         'body' : ['"Montserrat", sans-serif'],
@@ -30,6 +35,9 @@ module.exports = {
           '300': '#D8D8D8',
           '700': '#3A3A3A',
           '800': '#403E3F',
+        },
+        yellow:{
+          '600': '#D6AC75',
         },
         body: '#ffffff',
 

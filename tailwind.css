@@ -5,11 +5,14 @@
 @import "tailwindcss/utilities";
 
 @layer base{
+    html{
+        @apply font-body;
+    }
     body{
-        @apply font-body bg-body
+        @apply bg-body
     }
     .section-title{
-        @apply mb-10 text-4xl tracking-wider text-gray-800 font-title;
+        @apply mb-10 text-[2.375rem] leading-9 tracking-wider text-gray-800 font-title;
     }
 }
 
@@ -19,13 +22,13 @@
     }
     /* Start Header css */
     .header-top-wrapper{
-        @apply bg-primary-dark p-1.5; 
+        @apply px-4 py-2 bg-primary-dark; 
     }
     .header-top{
         @apply grid items-center grid-cols-3 gap-4;
     }
     .header-top li{
-        @apply flex items-center space-x-2 text-base leading-6 tracking-widest text-white;
+        @apply flex items-center space-x-2 leading-6 tracking-widest text-white text-tiny;
     }
     .header-top li:nth-child(2){
         @apply justify-center mr-16;
@@ -46,7 +49,7 @@
         @apply inline-block max-h-4
     }
     .header-middle-navigation li a{
-        @apply text-base leading-6 tracking-widest text-gray-700 uppercase hover:text-primary-dark;
+        @apply leading-6 tracking-widest text-gray-700 uppercase text-tiny hover:text-primary-dark;
     }
     .header-middle-right li img{
         @apply max-h-6
@@ -58,15 +61,43 @@
         @apply flex items-center justify-between space-x-5 list-none;
     }
     .header-main-navigation li a{
-        @apply block py-4 text-base leading-6 tracking-widest text-gray-700 hover:text-primary-dark;
+        @apply block py-4 leading-6 tracking-widest text-gray-700 text-tiny hover:text-primary-dark;
     }
     /* End Header css */
 
     .know-from-brands{
-        @apply grid grid-cols-5 gap-4;
+        @apply flex -mr-4 space-x-5 overflow-x-auto flex-nowrap md:overflow-x-visible md:space-x-0 md:-mr-0 md:grid md:grid-cols-5 md:gap-4;
+    }
+    .know-from-brands div{
+        @apply flex-shrink-0;
     }
     .know-from-brands img{
         @apply mx-auto max-h-20;
+    }
+
+    .best-sellers-wrapper{
+        @apply grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4;
+    }
+    .best-sellers-section .section-title{
+        @apply mb-14;
+    }
+    .best-sellers-block .product-image-wrapper{
+        @apply flex items-center justify-center mb-6;
+    }
+    .best-sellers-block .product-image-wrapper img{
+        @apply max-h-[26rem];
+    }
+    .best-sellers-block h4{
+        @apply text-[1.375rem] leading-[1.75rem] text-center text-gray-800;
+    }
+    .best-sellers-block h5{
+        @apply text-[1.125rem] leading-[1.75rem] text-center text-gray-800 mt-3;
+    }
+    .best-sellers-block ul{
+        @apply flex justify-center mt-2 space-x-1;
+    }
+    .best-sellers-block ul li i{
+        @apply text-xs text-yellow-600;
     }
 
     .our-service-section{
@@ -76,7 +107,7 @@
         @apply text-white mb-14
     }
     .our-service-wrapper{
-        @apply grid grid-cols-3 gap-4;
+        @apply grid grid-cols-1 gap-4 md:grid-cols-3;
     }
     .our-service-block{
         @apply max-w-[400px] mx-auto text-center;
