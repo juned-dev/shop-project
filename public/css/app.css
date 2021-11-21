@@ -641,6 +641,45 @@ body {
   }
 }
 
+.button {
+  display: inline-flex;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-primary {
+  --tw-bg-opacity: 1;
+  background-color: rgba(116, 212, 76, var(--tw-bg-opacity));
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.button-primary:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(89, 161, 58, var(--tw-bg-opacity));
+}
+
+.button-md {
+  padding-left: 5.75rem;
+  padding-right: 5.75rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 /* Start Header css */
 
 .header-top-wrapper {
@@ -969,6 +1008,132 @@ body {
   }
 }
 
+.left-image-content-block {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .left-image-content-block {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .left-image-content-block {
+    gap: 0px;
+  }
+}
+
+.left-content-block {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .left-content-block {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1280px) {
+  .left-content-block {
+    max-width: 90%;
+  }
+}
+
+.left-img-block img {
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 40rem;
+}
+
+@media (min-width: 768px) {
+  .left-img-block img {
+    margin-left: 0px;
+  }
+}
+
+.left-content-block h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  line-height: 2.625rem;
+  --tw-text-opacity: 1;
+  color: rgba(58, 58, 58, var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .left-content-block h3 {
+    margin-bottom: 1.25rem;
+  }
+
+  .left-content-block h3 {
+    font-size: 2rem;
+  }
+}
+
+.left-content-block h4 {
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgba(91, 91, 91, var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .left-content-block h4 {
+    margin-bottom: 2rem;
+  }
+
+  .left-content-block h4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.gray-divider {
+  height: 1px;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgba(91, 91, 91, var(--tw-bg-opacity));
+}
+
+.left-content-block .gray-divider {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .left-content-block .gray-divider {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .left-content-block .gray-divider {
+    width: 90%;
+  }
+}
+
+.left-content-block p {
+  margin-bottom: 1rem;
+  --tw-text-opacity: 1;
+  color: rgba(91, 91, 91, var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .left-content-block p {
+    margin-bottom: 2rem;
+  }
+
+  .left-content-block p {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
 .our-service-section {
   --tw-bg-opacity: 1;
   background-color: rgba(89, 161, 58, var(--tw-bg-opacity));
@@ -1022,8 +1187,22 @@ body {
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
+.about-us-section h3, .about-us-section p {
+  --tw-text-opacity: 1;
+  color: rgba(64, 62, 63, var(--tw-text-opacity));
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .bg-yellow-400 {
   background-color: rgba(255,218,107,0.20);
+}
+
+.bg-yellow-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 248, 225, var(--tw-bg-opacity));
 }
 
 .pt-20 {
@@ -1040,4 +1219,10 @@ body {
 
 .text-right {
   text-align: right;
+}
+
+@media (min-width: 1280px) {
+  .xl\:mt-20 {
+    margin-top: 5rem;
+  }
 }

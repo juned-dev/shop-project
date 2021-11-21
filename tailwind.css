@@ -17,8 +17,14 @@
 }
 
 @layer components{
-    .btn{
-        @apply px-10 py-3 font-semibold text-white uppercase bg-primary-dark font-body;
+    .button{
+        @apply inline-flex px-10 py-3 font-semibold tracking-widest uppercase transition duration-500 ease-in-out font-body; 
+    }
+    .button-primary{
+        @apply font-semibold text-white bg-primary-light hover:bg-primary-dark;
+    }
+    .button-md{
+        @apply px-[5.75rem] py-4 ;
     }
     /* Start Header css */
     .header-top-wrapper{
@@ -116,6 +122,32 @@
         @apply text-xl sm:text-[2rem] leading-[2.375rem] text-white absolute left-6 bottom-5;
     }
 
+    .left-image-content-block{
+        @apply grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-0;
+    }
+    .left-content-block{
+        @apply text-center lg:text-left xl:max-w-[90%];
+    }
+    .left-img-block img{
+        @apply max-h-[40rem]  ml-auto mr-auto md:ml-0;
+    }
+    .left-content-block h3{
+        @apply text-2xl lg:text-[2rem] leading-[2.625rem] font-semibold text-gray-700 mb-3 lg:mb-5;
+    }
+    .left-content-block h4{
+        @apply mb-6 lg:mb-8 text-xl lg:text-2xl font-medium text-gray-600;
+    }
+    .gray-divider{
+        @apply w-full h-px bg-gray-600;
+    }
+    .left-content-block .gray-divider{
+        @apply  mb-4 lg:mb-8 xl:w-[90%];
+    }
+
+    .left-content-block p{
+        @apply mb-4 lg:mb-8 lg:text-xl text-gray-600; 
+    }
+
     .our-service-section{
         @apply bg-primary-dark;
     }
@@ -136,5 +168,9 @@
     }
     .our-service-block p{
         @apply text-xl text-white;
+    }
+
+    .about-us-section h3, .about-us-section p{
+        @apply text-gray-800;
     }
 }
