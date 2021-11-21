@@ -42,10 +42,15 @@ module.exports = {
           '400': 'rgba(255,218,107,0.20)',
           '600': '#D6AC75',
           '700': '#FFF8E1',
+          '800': '#FFDA6B',
         },
         body: '#ffffff',
 
-      }
+      },
+
+      dropShadow: {
+         md: '0 3px 20px rgba(0, 0, 0, 0.10)',
+       }
     },
   },
   variants: {
