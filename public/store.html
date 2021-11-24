@@ -11,6 +11,8 @@
   <!-- template custom css -->
   <link href="css/app.css" rel="stylesheet">
   
+  <!-- alpine js -->
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   <title>Store page</title>
 </head>
 <body>
@@ -113,7 +115,7 @@
     </div>
     </div>
     <!-- End header bottom part -->
-  </header>
+</header>
 
   <!-- Start featured banner -->
     <div class="featured-banner">
@@ -137,55 +139,83 @@
   <section class="pt-20 pb-20">
       <div class="container">
           <h2 class="text-center section-title">Unsere Ladengeschäfte</h2>
-
-          <div class="space-y-20">
-            <div class="info-box group">
-                <div class="info-box-left">
-                    <h3>Lorem ipsum dolor sit amet, consetetur</h3>
-                    <div class="space-y-6">
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-                        </p>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                        </p>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
-                        </p>
+          <!--Start Tab component -->
+          <div x-data="{ selected: 'option-1' }">
+            <nav class="mb-8">
+              <ul class="flex justify-center space-x-20">
+                <li class="px-2 py-2 text-[1.125rem] text-blue-100 border-b-2 border-transparent hover:text-gray-800 hover:border-primary-light" 
+                x-bind:class="{ '!text-gray-800 font-semibold !border-primary-light': selected === 'option-1' }">
+                  <a href="#option-1" x-on:click="selected = 'option-1'">Mainz</a>
+                </li>
+                <li class="px-2 py-2 text-[1.125rem] text-blue-100 border-b-2 border-transparent hover:text-gray-800 hover:border-primary-light" x-bind:class="{ '!text-gray-800 font-semibold !border-primary-light': selected === 'option-2' }">
+                  <a href="#option-2" x-on:click="selected = 'option-2'" >Wiesbaden 1</a>
+                </li>
+                <li class="px-2 py-2 text-[1.125rem] text-blue-100 border-b-2 border-transparent hover:text-gray-800 hover:border-primary-light" class="px-2 py-2 text-blue-100 border-b-2 border-transparent" x-bind:class="{ '!text-gray-800 font-semibold !border-primary-light': selected === 'option-3' }">
+                  <a href="#option-3" x-on:click="selected = 'option-3'" x-bind:class="{ 'text-gray-800': selected === 'option-3' }">Wiesbaden 2</a>
+                </li>
+              </ul>
+            </nav>
+        
+            <div x-show.transition.in.opacity.duration.750ms="selected === 'option-1'" class="p-4">
+              <div class="space-y-20">
+                <div class="info-box group">
+                    <div class="info-box-left">
+                        <h3>Lorem ipsum dolor sit amet, consetetur</h3>
+                        <div class="space-y-6">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+                            </p>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                            </p>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="info-box-right">
+                        <img src="images/info-right.png" alt="info-right" />
                     </div>
                 </div>
-
-                <div class="info-box-right">
-                    <img src="images/info-right.png" alt="info-right" />
+    
+                <div class="info-box group">
+                    <div class="info-box-left">
+                        <h3>Hier findest du uns</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4>Location Name</h4>
+                                <p>55116 Mainz</p>
+                                <p>Deutschland</p>
+                            </div>
+    
+                            <div>
+                                <p>Öffnungszeiten</p>
+                                <p>Mo-Fr 10:00-18:30 Uhr</p>
+                                <p>Sa 10:00-18:00 Uhr</p>
+                            </div>
+                            <div>
+                                <p>Kontakt:</p>
+                                <p>0234 567890</p>
+                                <p>hallo@mail.de</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+    
+                    <div class="info-box-right">
+                        <img src="images/info-left.png" alt="info-left" />
+                    </div>
                 </div>
+              </div>
             </div>
-
-            <div class="info-box group">
-                <div class="info-box-left">
-                    <h3>Hier findest du uns</h3>
-                    <div class="space-y-6">
-                        <div>
-                            <h4>Location Name</h4>
-                            <p>55116 Mainz</p>
-                            <p>Deutschland</p>
-                        </div>
-
-                        <div>
-                            <p>Öffnungszeiten</p>
-                            <p>Mo-Fr 10:00-18:30 Uhr</p>
-                            <p>Sa 10:00-18:00 Uhr</p>
-                        </div>
-                        <div>
-                            <p>Kontakt:</p>
-                            <p>0234 567890</p>
-                            <p>hallo@mail.de</p>
-                        </div>
-                        
-                    </div>
-                </div>
-
-                <div class="info-box-right">
-                    <img src="images/info-left.png" alt="info-left" />
-                </div>
+        
+            <div x-show.transition.in.opacity.duration.750ms="selected === 'option-2'" class="p-4">
+              option-2 tab content
+            </div>
+        
+            <div x-show.transition.in.opacity.duration.750ms="selected === 'option-3'" class="p-4">
+              option-3 tab content
             </div>
           </div>
+          <!--End Tab component -->
       </div>
   </section>
   <!-- End our stores section -->
