@@ -16,9 +16,12 @@
   <title>Store page</title>
 </head>
 <body>
-<header>
+  <header x-data="{ mobNav: false }">
     <!-- Start header top part -->
     <div class="header-top-wrapper">
+      <!-- mobile hrader backdrop -->
+        <div :class="mobNav ? 'block' : 'hidden'" class="header-backdrop"></div>
+       <!-- mobile hrader backdrop -->
       <div class="container">
             <ul class="header-top">
             <li>
@@ -42,8 +45,16 @@
     <!-- Start header middle part -->
     <div class="header-middle-wrapper">
         <div class="container text-right">
-            <div class="header-middle-navigation">
-              <ul>
+            <div class="header-middle-inner-wrapper">
+                <div class="header-logo-wrapper">
+                  <!-- mobile nav toggler  -->
+                  <button class="nav-toggler" x-on:click="mobNav = ! mobNav"><i class="fas fa-bars"></i></button>
+                  <!-- mobile nav toggler  -->
+                    <!-- <img src="images/shop-logo-sm.png" alt="shop logo" /> -->
+                    <a href="">Shop Logo</a>
+                </div>
+              <div class="header-middle-navigation">
+              <ul class="contact-nav">
                 <li>
                   <a href="#">
                       <img src="images/info.png" alt="info icon" />
@@ -65,10 +76,14 @@
               </ul>
 
                 <ul class="header-middle-right">
-                  <li>
-                    <a href="#">
+                  <li x-data="{ open: false }" x-cloak>
+                    <button x-on:click="open = ! open">
                         <img src="images/search.png" alt="search icon" />
-                    </a>
+                    </button>
+                    <div :class="open ? 'opacity-100' : 'z-[-1]'" class="header-search-wrapper" x-cloak>
+                        <input class="header-search-input" type="text" placeholder="Search here.." />
+                        <button x-on:click="open = ! open" class="search-close"><i class="fas fa-times"></i></button>
+                    </div>
                   </li>
                   <li>
                     <a href="#">
@@ -77,10 +92,12 @@
                   </li>
                   <li>
                     <a href="#">
-                        <img src="images/cart.png" alt="cart icon" />
+                        <img src="images/cart-blank.png" alt="cart icon" />
+                        <span class="cart-items">0</span>
                     </a>
                   </li>
                 </ul>
+              </div>
             </div>
         </div>
     </div>
@@ -89,7 +106,11 @@
     <!-- Start header bottom part -->
     <div class="header-bottom-wrapper">
       <div class="container">
-        <nav class="header-main-navigation">
+        
+        <nav :class="mobNav ? 'left-0' : ''" class="header-main-navigation">
+          <button x-on:click="mobNav = ! mobNav" class="nav-close">
+            <i class="fas fa-times"></i>
+          </button>
           <li>
             <a href="#">Alle Produkte</a>
           </li>
@@ -115,7 +136,7 @@
     </div>
     </div>
     <!-- End header bottom part -->
-</header>
+  </header>
 
   <!-- Start featured banner -->
     <div class="featured-banner">
@@ -142,7 +163,7 @@
           <!--Start Tab component -->
           <div x-data="{ selected: 'option-1' }">
             <nav class="mb-8">
-              <ul class="flex justify-center space-x-20">
+              <ul class="flex justify-center space-x-2 md:space-x-20">
                 <li class="px-2 py-2 text-[1.125rem] text-blue-100 border-b-2 border-transparent hover:text-gray-800 hover:border-primary-light" 
                 x-bind:class="{ '!text-gray-800 font-semibold !border-primary-light': selected === 'option-1' }">
                   <a href="#option-1" x-on:click="selected = 'option-1'">Mainz</a>
