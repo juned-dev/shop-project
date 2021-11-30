@@ -1,46 +1,58 @@
 @font-face {
     font-family: 'Bebas Neue', sans-serif;
-    src: url('BEBASNEUE.OTF') format('otf'), 
-    url('BebasNeue.woff') format('woff'),
-    url('BebasNeue.woff2') format('woff2');
+    src: url('BEBASNEUE.OTF') format('otf'),
+     url('BebasNeue.woff2') format('woff2'),
+     url('BebasNeue.woff') format('woff');
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Montserrat', sans-serif;
-    src: url('fonts/Montserrat-Light.otf') format('otf'), url('fonts/Montserrat-Light.woff') format('woff'), url('fonts/Montserrat-Light.woff2') format('woff2');
+    src: url('Montserrat-Light.otf') format('otf'),
+     url('Montserrat-Light.woff') format('woff'),
+    url('Montserrat-Light.woff2') format('woff2');
     font-weight: 300;
     font-display: swap;
 }
 @font-face {
     font-family: 'Montserrat', sans-serif;
-    src: url('fonts/Montserrat-Regular.otf') format('otf'), url('fonts/Montserrat-Regular.woff') format('woff'), url('fonts/Montserrat-Regular.woff2') format('woff2');
+    src: url('Montserrat-Regular.otf') format('otf'),
+     url('Montserrat-Regular.woff') format('woff'),
+      url('Montserrat-Regular.woff2') format('woff2');
     font-weight: 400;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Montserrat', sans-serif;
-    src: url('fonts/Montserrat-Medium.otf') format('otf'), url('fonts/Montserrat-Medium.woff') format('woff'), url('fonts/Montserrat-Medium.woff2') format('woff2');
+    src: url('Montserrat-Medium.otf') format('otf'),
+     url('Montserrat-Medium.woff') format('woff'),
+      url('Montserrat-Medium.woff2') format('woff2');
     font-weight: 500;
     font-display: swap;
 }
 @font-face {
     font-family: 'Montserrat', sans-serif;
-    src: url('fonts/Montserrat-SemiBold.otf') format('otf'), url('fonts/Montserrat-SemiBold.woff') format('woff'), url('fonts/Montserrat-SemiBold.woff2') format('woff2');
+    src: url('Montserrat-SemiBold.otf') format('otf'), 
+    url('Montserrat-SemiBold.woff') format('woff'),
+     url('Montserrat-SemiBold.woff2') format('woff2');
     font-weight: 600;
     font-display: swap;
 }
 @font-face {
     font-family: 'Montserrat', sans-serif;
-    src: url('fonts/Montserrat-Bold.otf') format('otf'),url('fonts/Montserrat-Bold.woff') format('woff'),url('fonts/Montserrat-Bold.woff2') format('woff2');
+    src: url('Montserrat-Bold.otf') format('otf'),
+    url('Montserrat-Bold.woff') format('woff'),
+    url('Montserrat-Bold.woff2') format('woff2');
     font-weight: 700;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Montserrat', sans-serif;
-    src: url('fonts/Montserrat-ExtraBold.otf') format('otf'), url('fonts/Montserrat-ExtraBold.woff') format('woff'),url('fonts/Montserrat-ExtraBold.woff2') format('woff2');
+    src: url('Montserrat-ExtraBold.otf') format('otf'),
+     url('Montserrat-ExtraBold.woff') format('woff'),
+     url('/fonts/Montserrat-ExtraBold.woff2') format('woff2');
     font-weight: 900;
     font-display: swap;
 }
