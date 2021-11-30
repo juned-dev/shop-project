@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Bebas Neue', sans-serif;
-    src: url('/fonts/BEBASNEUE.OTF') format('otf'), url('BebasNeue.woff2') format('woff2'),url('BebasNeue.woff') format('woff');
+    src: url('/fonts/BEBASNEUE.OTF') format('otf'), url('/fonts/BebasNeue.woff2') format('woff2'),url('/fonts/BebasNeue.woff') format('woff');
     font-display: swap;
 }
 
