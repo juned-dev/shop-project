@@ -14,8 +14,8 @@ module.exports = {
       },
       
       fontFamily:{
-        'title' : ['"Bebas Neue", sans-serif'],
-        'body' : ['"Montserrat", sans-serif'],
+        'title' : ['"Bebas Neue"'],
+        'body' : ['"Montserrat"'],
         'fontawesome' : ['"Font Awesome 5 Free"'],
       },
 

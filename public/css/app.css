@@ -619,7 +619,7 @@ video {
 }
 
 html {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
 }
 
 body {
@@ -629,7 +629,7 @@ body {
 
 .section-title {
   margin-bottom: 2.5rem;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Bebas Neue";
   font-size: 2.375rem;
   line-height: 2.25rem;
   letter-spacing: 0.05em;
@@ -662,7 +662,7 @@ body {
   justify-content: center;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -1764,7 +1764,7 @@ body {
 
 .footer-title {
   margin-bottom: 1.5rem;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Bebas Neue";
   font-size: 1.25rem;
   line-height: 1.75rem;
   letter-spacing: 0.05em;
@@ -1987,7 +1987,7 @@ body {
   right: 0px;
   --tw-translate-y: -50%;
   transform: var(--tw-transform);
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Bebas Neue";
   font-size: 1.875rem;
   line-height: 2.25rem;
   line-height: 6rem;
