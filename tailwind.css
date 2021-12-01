@@ -37,10 +37,10 @@
         @apply px-4 py-2 bg-primary-dark; 
     }
     .header-top{
-        @apply flex items-center justify-center md:justify-between flex-col md:flex-row grid-cols-3 md:gap-4 lg:grid;
+        @apply flex flex-col items-center justify-center grid-cols-3 md:justify-between md:flex-row md:gap-4 lg:grid;
     }
     .header-top li{
-        @apply flex items-center space-x-2 leading-6 tracking-widest text-white text-xs md:text-tiny;
+        @apply flex items-center space-x-2 text-xs leading-6 tracking-widest text-white md:text-tiny;
     }
     .header-top li:nth-child(2){
         @apply justify-center hidden md:flex lg:mr-16;
@@ -52,10 +52,16 @@
         @apply flex-shrink-0 max-h-4;
     }
     .nav-toggler{
-        @apply text-2xl inline-block md:hidden align-middle pr-4;
+        @apply inline-block pr-4 align-middle md:hidden;
+    }
+    .nav-toggler img{
+        @apply max-h-[1.5rem];
     }
     .nav-close{
-        @apply inline-block md:hidden absolute top-0 right-0 p-4 bg-gray-700 text-white;
+        @apply absolute top-0 right-0 inline-block p-4 md:hidden;
+    }
+    .nav-close img{
+        @apply max-h-[1.5rem];
     }
     .header-middle-inner-wrapper{
         @apply relative flex items-center justify-between py-6;
@@ -68,6 +74,9 @@
     }
     .search-close{
         @apply absolute p-4 right-0 z-[1] top-1/2 transform -translate-y-1/2 hover:text-primary-dark;
+    }
+    .search-close img{
+        @apply  !max-h-[1rem];
     }
     .header-middle-navigation{
         @apply flex items-center space-x-16;
@@ -115,11 +124,11 @@
     .main-slider img{
         @apply w-full;
     }
-    .main-slider .fa-chevron-left{
-        @apply absolute top-1/2 transform -translate-y-1/2 z-[1] left-10 text-white cursor-pointer hover:opacity-50;
+    .main-slider .slick-prev{
+        @apply absolute top-1/2 transform -translate-y-1/2 z-[1] left-10 cursor-pointer hover:opacity-50 max-h-[1rem] w-[0.625rem];
     }
-    .main-slider .fa-chevron-right{
-        @apply absolute top-1/2 transform -translate-y-1/2 z-[1] left-auto right-10 text-white cursor-pointer hover:opacity-50;
+    .main-slider .slick-next{
+        @apply absolute top-1/2 transform -translate-y-1/2 z-[1] left-auto right-10 cursor-pointer hover:opacity-50 max-h-[1rem] w-[0.625rem];
     }
     .know-from-brands{
         @apply flex -mr-4 space-x-5 overflow-x-auto flex-nowrap md:overflow-x-visible md:space-x-0 md:-mr-0 md:grid md:grid-cols-5 md:gap-4;
@@ -152,8 +161,8 @@
     .best-sellers-block ul{
         @apply flex justify-center mt-2 space-x-1;
     }
-    .best-sellers-block ul li i{
-        @apply text-xs text-yellow-600;
+    .best-sellers-block ul li img{
+        @apply max-h-[0.75rem] max-w-[0.75rem] text-yellow-600;
     }
 
     .hp-categories-wrapper{
@@ -169,23 +178,23 @@
         @apply max-h-[16.25rem] transition-all duration-300 transform hover:scale-110;
     }
     .hp-categories-block h3{
-        @apply text-xl sm:text-[2rem] leading-[2.375rem] text-white absolute left-6 bottom-5;
+        @apply text-xl sm:text-[2rem] leading-[2.625rem] text-white absolute left-6 bottom-5;
     }
 
     .left-image-content-block{
         @apply grid grid-cols-1 gap-4 md:grid-cols-2 xl:gap-0;
     }
     .left-content-block{
-        @apply text-center lg:text-left xl:max-w-[90%];
+        @apply text-center lg:text-left xl:max-w-[36.25rem];
     }
     .left-img-block img{
         @apply max-h-[40rem]  ml-auto mr-auto md:ml-0;
     }
     .left-content-block h3{
-        @apply text-2xl lg:text-[2rem] sm:leading-[2.625rem] font-semibold text-gray-700 mb-3 lg:mb-5;
+        @apply text-2xl lg:text-[1.75rem] sm:leading-[2.625rem] font-semibold text-gray-700 mb-3 lg:mb-5;
     }
     .left-content-block h4{
-        @apply mb-6 text-xl font-medium text-gray-600 lg:mb-8 lg:text-2xl;
+        @apply mb-6 text-xl leading-[2.625rem] font-medium text-gray-600 lg:mb-8 lg:text-2xl;
     }
     .gray-divider{
         @apply w-full h-px bg-gray-600;
@@ -195,7 +204,7 @@
     }
 
     .left-content-block p{
-        @apply mb-4 text-gray-600 lg:mb-8 lg:text-xl; 
+        @apply mb-4 text-gray-600 lg:mb-8 lg:text-[1.188rem] leading-[1.75rem]; 
     }
 
     .our-service-section{
@@ -217,7 +226,7 @@
         @apply mb-5 text-2xl font-semibold text-white;
     }
     .our-service-block p{
-        @apply text-xl text-white;
+        @apply text-[1.188rem] leading-[1.75rem] text-white max-w-[17.5rem] mx-auto;
     }
 
 
@@ -248,11 +257,9 @@
     .testimonials-block ul{
         @apply flex items-center mb-3 space-x-3;
     }
-    .testimonials-block ul li i{
-        @apply text-3xl text-yellow-800;
-    }
+    
     .testimonials-block h3{
-        @apply mb-4 text-xl font-semibold text-gray-700;
+        @apply mb-4 text-xl leading-[1.5rem] font-semibold text-gray-700;
     }
     .testimonials-block p{
         @apply text-[1.125rem] leading-[1.375rem] text-gray-600 h-[5.625rem] overflow-hidden;
@@ -275,10 +282,10 @@
         @apply pt-8 px-7 pb-7; 
     }
     .blog-grid-card-body h3{
-        @apply xl:text-2xl leading-[2.625rem] font-semibold text-gray-700 mb-4; 
+        @apply text-2xl leading-[2.625rem] font-semibold text-gray-700 mb-4; 
     }
     .blog-grid-card-body p{
-        @apply mb-10 xl:text-xl text-gray-800 h-[75px] md:h-[85px] overflow-hidden; 
+        @apply mb-10 text-[1.188rem] leading-[1.75rem] text-gray-800; 
     }
 
     .footer-top-wrapper{
@@ -288,7 +295,7 @@
         @apply text-[1.125rem] leading-[1.5rem];
     }
     .footer-title{
-        @apply mb-6 text-xl tracking-wider text-white font-title;
+        @apply mb-6 text-xl leading-[1.5rem] tracking-wider text-white font-title;
     }
     .footer-reviews-col{
         @apply col-span-12 sm:col-span-6 xl:col-span-4;
@@ -300,7 +307,7 @@
         @apply flex items-center space-x-3;
     }
     .footer-social-list ul li a{
-        @apply inline-flex items-center justify-center text-white hover:bg-white hover:text-gray-700 transition ease-in-out duration-500 h-[2.375rem] w-[2.375rem] rounded-full border border-white;
+        @apply inline-flex items-center justify-center h-[2.375rem] w-[2.375rem] rounded-full border border-white;
     }
 
     .footer-contact-col{
@@ -358,7 +365,7 @@
         @apply flex space-x-3;
     }
     .breadcrumb li{
-        @apply text-sm uppercase text-primary-dark;
+        @apply text-sm leading-[1.5rem] uppercase text-primary-dark;
     }
     .breadcrumb li.active{
         @apply text-gray-900 before:content-['\f054'] before:font-fontawesome before:text-primary-dark before:mr-3 before:font-black;

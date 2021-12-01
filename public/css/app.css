@@ -812,8 +812,6 @@ body {
   display: inline-block;
   padding-right: 1rem;
   vertical-align: middle;
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -822,22 +820,26 @@ body {
   }
 }
 
+.nav-toggler img {
+  max-height: 1.5rem;
+}
+
 .nav-close {
   position: absolute;
   top: 0px;
   right: 0px;
   display: inline-block;
-  --tw-bg-opacity: 1;
-  background-color: rgba(58, 58, 58, var(--tw-bg-opacity));
   padding: 1rem;
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
 @media (min-width: 768px) {
   .nav-close {
     display: none;
   }
+}
+
+.nav-close img {
+  max-height: 1.5rem;
 }
 
 .header-middle-inner-wrapper {
@@ -918,6 +920,10 @@ body {
 .search-close:hover {
   --tw-text-opacity: 1;
   color: rgba(89, 161, 58, var(--tw-text-opacity));
+}
+
+.search-close img {
+  max-height: 1rem !important;
 }
 
 .header-middle-navigation {
@@ -1117,38 +1123,38 @@ body {
   width: 100%;
 }
 
-.main-slider .fa-chevron-left {
+.main-slider .slick-prev {
   position: absolute;
   top: 50%;
   left: 2.5rem;
   z-index: 1;
+  max-height: 1rem;
+  width: 0.625rem;
   --tw-translate-y: -50%;
   transform: var(--tw-transform);
   transform: var(--tw-transform);
   cursor: pointer;
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
-.main-slider .fa-chevron-left:hover {
+.main-slider .slick-prev:hover {
   opacity: 0.5;
 }
 
-.main-slider .fa-chevron-right {
+.main-slider .slick-next {
   position: absolute;
   top: 50%;
   left: auto;
   right: 2.5rem;
   z-index: 1;
+  max-height: 1rem;
+  width: 0.625rem;
   --tw-translate-y: -50%;
   transform: var(--tw-transform);
   transform: var(--tw-transform);
   cursor: pointer;
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
-.main-slider .fa-chevron-right:hover {
+.main-slider .slick-next:hover {
   opacity: 0.5;
 }
 
@@ -1275,9 +1281,9 @@ body {
   margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.best-sellers-block ul li i {
-  font-size: 0.75rem;
-  line-height: 1rem;
+.best-sellers-block ul li img {
+  max-height: 0.75rem;
+  max-width: 0.75rem;
   --tw-text-opacity: 1;
   color: rgba(214, 172, 117, var(--tw-text-opacity));
 }
@@ -1328,7 +1334,7 @@ body {
   bottom: 1.25rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
-  line-height: 2.375rem;
+  line-height: 2.625rem;
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
@@ -1369,7 +1375,7 @@ body {
 
 @media (min-width: 1280px) {
   .left-content-block {
-    max-width: 90%;
+    max-width: 36.25rem;
   }
 }
 
@@ -1406,7 +1412,7 @@ body {
   }
 
   .left-content-block h3 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -1415,6 +1421,7 @@ body {
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 500;
+  line-height: 2.625rem;
   --tw-text-opacity: 1;
   color: rgba(91, 91, 91, var(--tw-text-opacity));
 }
@@ -1455,6 +1462,7 @@ body {
 
 .left-content-block p {
   margin-bottom: 1rem;
+  line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: rgba(91, 91, 91, var(--tw-text-opacity));
 }
@@ -1465,8 +1473,7 @@ body {
   }
 
   .left-content-block p {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    font-size: 1.188rem;
   }
 }
 
@@ -1519,7 +1526,10 @@ body {
 }
 
 .our-service-block p {
-  font-size: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 17.5rem;
+  font-size: 1.188rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
@@ -1638,18 +1648,12 @@ body {
   margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.testimonials-block ul li i {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  --tw-text-opacity: 1;
-  color: rgba(255, 218, 107, var(--tw-text-opacity));
-}
-
 .testimonials-block h3 {
   margin-bottom: 1rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 600;
+  line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgba(58, 58, 58, var(--tw-text-opacity));
 }
@@ -1716,38 +1720,20 @@ body {
 
 .blog-grid-card-body h3 {
   margin-bottom: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 600;
   line-height: 2.625rem;
   --tw-text-opacity: 1;
   color: rgba(58, 58, 58, var(--tw-text-opacity));
 }
 
-@media (min-width: 1280px) {
-  .blog-grid-card-body h3 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
 .blog-grid-card-body p {
   margin-bottom: 2.5rem;
-  height: 75px;
-  overflow: hidden;
+  font-size: 1.188rem;
+  line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: rgba(64, 62, 63, var(--tw-text-opacity));
-}
-
-@media (min-width: 768px) {
-  .blog-grid-card-body p {
-    height: 85px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .blog-grid-card-body p {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
 }
 
 .footer-top-wrapper {
@@ -1767,6 +1753,7 @@ body {
   font-family: "Bebas Neue";
   font-size: 1.25rem;
   line-height: 1.75rem;
+  line-height: 1.5rem;
   letter-spacing: 0.05em;
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
@@ -1821,22 +1808,6 @@ body {
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgba(255, 255, 255, var(--tw-border-opacity));
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  transition-duration: 500ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer-social-list ul li a:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgba(58, 58, 58, var(--tw-text-opacity));
 }
 
 .footer-contact-col {
@@ -2024,6 +1995,7 @@ body {
   font-size: 0.875rem;
   line-height: 1.25rem;
   text-transform: uppercase;
+  line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgba(89, 161, 58, var(--tw-text-opacity));
 }

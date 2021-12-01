@@ -8,7 +8,7 @@ $(document).ready(function(){
       speed: 500,
       fade: true,
       cssEase: 'linear',
-      prevArrow:"<i class='fas fa-chevron-left'></i>",
-      nextArrow:"<i class='fas fa-chevron-right'></i>",
+      prevArrow:"<img class='slick-prev' src='../images/icon_arrow_left_xl.svg' />",
+      nextArrow:"<img class='slick-next' src='../images/icon_arrow_right_xl.svg' />",
     });
   });

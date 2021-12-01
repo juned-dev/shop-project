@@ -6,8 +6,7 @@
   <link rel="preload stylesheet" href="fonts/fonts.css" as="style" crossorigin="anonymous">
   <!-- Slick slider css -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-  <!-- fontawesome 5 css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous"/>
+  
   <!-- template custom css -->
   <link href="css/app.css" rel="stylesheet">
 
@@ -49,7 +48,9 @@
             <div class="header-middle-inner-wrapper">
                 <div class="header-logo-wrapper">
                   <!-- mobile nav toggler  -->
-                  <button class="nav-toggler" x-on:click="mobNav = ! mobNav"><i class="fas fa-bars"></i></button>
+                  <button class="nav-toggler" x-on:click="mobNav = ! mobNav">
+                    <img src="images/menu.png" alt="menu toggle icon" />
+                  </button>
                   <!-- mobile nav toggler  -->
                     <!-- <img src="images/shop-logo-sm.png" alt="shop logo" /> -->
                     <a href="">Shop Logo</a>
@@ -83,7 +84,9 @@
                     </button>
                     <div :class="open ? 'opacity-100' : 'z-[-1]'" class="header-search-wrapper" x-cloak>
                         <input class="header-search-input" type="text" placeholder="Search here.." />
-                        <button x-on:click="open = ! open" class="search-close"><i class="fas fa-times"></i></button>
+                        <button x-on:click="open = ! open" class="search-close">
+                          <img src="images/close.png" alt="close icon" />
+                        </button>
                     </div>
                   </li>
                   <li>
@@ -110,7 +113,7 @@
         
         <nav :class="mobNav ? 'left-0' : ''" class="header-main-navigation">
           <button x-on:click="mobNav = ! mobNav" class="nav-close">
-            <i class="fas fa-times"></i>
+            <img src="images/close-red.png" alt="close icon" />
           </button>
           <li>
             <a href="#">Alle Produkte</a>
@@ -138,6 +141,7 @@
     </div>
     <!-- End header bottom part -->
   </header>
+
 
   <div class="main-slider">
       <div>
@@ -190,11 +194,11 @@
         </div>
         <h4>Lorem ipsum dolor sit amet</h4>
         <ul>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
+          <li><img src="images/star.svg" alt="star icon" /></li>
+          <li><img src="images/star.svg" alt="star icon" /></li>
+          <li><img src="images/star.svg" alt="star icon" /></li>
+          <li><img src="images/star.svg" alt="star icon" /></li>
+          <li><img src="images/star.svg" alt="star icon" /></li>
         </ul>
         <h5>€12,90</h5>
       </div>
@@ -205,11 +209,11 @@
         </div>
         <h4>Lorem ipsum dolor sit amet</h4>
         <ul>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
+          <li><img src="images/star.svg" alt="star icon" /></li>
+          <li><img src="images/star.svg" alt="star icon" /></li>
+          <li><img src="images/star.svg" alt="star icon" /></li>
+          <li><img src="images/star.svg" alt="star icon" /></li>
+          <li><img src="images/star.svg" alt="star icon" /></li>
         </ul>
         <h5>€39,99</h5>
       </div>
@@ -220,11 +224,11 @@
         </div>
         <h4>Lorem ipsum dolor sit amet</h4>
         <ul>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
+          <li><img src="images/star.svg" alt="star icon" /></li>
+          <li><img src="images/star.svg" alt="star icon" /></li>
+          <li><img src="images/star.svg" alt="star icon" /></li>
+          <li><img src="images/star.svg" alt="star icon" /></li>
+          <li><img src="images/star.svg" alt="star icon" /></li>
         </ul>
         <h5>€52,99</h5>
       </div>
@@ -235,11 +239,11 @@
         </div>
         <h4>Lorem ipsum dolor sit amet</h4>
         <ul>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
+          <li><img src="images/star.svg" alt="star icon" /></li>
+          <li><img src="images/star.svg" alt="star icon" /></li>
+          <li><img src="images/star.svg" alt="star icon" /></li>
+          <li><img src="images/star.svg" alt="star icon" /></li>
+          <li><img src="images/star.svg" alt="star icon" /></li>
         </ul>
         <h5>€154,90</h5>
       </div>
@@ -422,22 +426,22 @@
         <div class="testimonials-content-row">
             <div class="testimonials-block">
               <ul>
-                <li><i class="fas fa-star"></i></li>
-                <li><i class="fas fa-star"></i></li>
-                <li><i class="fas fa-star"></i></li>
-                <li><i class="fas fa-star"></i></li>
-                <li><i class="fas fa-star"></i></li>
+                <li><img src="images/star-yellow.svg" alt="star icon" /></li>
+                <li><img src="images/star-yellow.svg" alt="star icon" /></li>
+                <li><img src="images/star-yellow.svg" alt="star icon" /></li>
+                <li><img src="images/star-yellow.svg" alt="star icon" /></li>
+                <li><img src="images/star-yellow.svg" alt="star icon" /></li>
               </ul>
               <h3>Lorem ipsum</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique nec, ornare tellus ultrices praesent cras at odio scelerisque. Feugiat a in purus id tortor felis justo, amet vulputate</p>
             </div>
             <div class="testimonials-block">
               <ul>
-                <li><i class="fas fa-star"></i></li>
-                <li><i class="fas fa-star"></i></li>
-                <li><i class="fas fa-star"></i></li>
-                <li><i class="fas fa-star"></i></li>
-                <li><i class="fas fa-star"></i></li>
+                <li><img src="images/star-yellow.svg" alt="star icon" /></li>
+                <li><img src="images/star-yellow.svg" alt="star icon" /></li>
+                <li><img src="images/star-yellow.svg" alt="star icon" /></li>
+                <li><img src="images/star-yellow.svg" alt="star icon" /></li>
+                <li><img src="images/star-yellow.svg" alt="star icon" /></li>
               </ul>
               <h3>Lorem ipsum</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique nec, ornare tellus ultrices praesent cras at odio scelerisque. Feugiat a in purus id tortor felis justo, amet vulputate</p>
@@ -446,22 +450,22 @@
         <div class="testimonials-content-row">
             <div class="testimonials-block">
               <ul>
-                <li><i class="fas fa-star"></i></li>
-                <li><i class="fas fa-star"></i></li>
-                <li><i class="fas fa-star"></i></li>
-                <li><i class="fas fa-star"></i></li>
-                <li><i class="fas fa-star"></i></li>
+                <li><img src="images/star-yellow.svg" alt="star icon" /></li>
+                <li><img src="images/star-yellow.svg" alt="star icon" /></li>
+                <li><img src="images/star-yellow.svg" alt="star icon" /></li>
+                <li><img src="images/star-yellow.svg" alt="star icon" /></li>
+                <li><img src="images/star-yellow.svg" alt="star icon" /></li>
               </ul>
               <h3>Lorem ipsum</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique nec, ornare tellus ultrices praesent cras at odio scelerisque. Feugiat a in purus id tortor felis justo, amet vulputate</p>
             </div>
             <div class="testimonials-block">
               <ul>
-                <li><i class="fas fa-star"></i></li>
-                <li><i class="fas fa-star"></i></li>
-                <li><i class="fas fa-star"></i></li>
-                <li><i class="fas fa-star"></i></li>
-                <li><i class="fas fa-star"></i></li>
+                <li><img src="images/star-yellow.svg" alt="star icon" /></li>
+                <li><img src="images/star-yellow.svg" alt="star icon" /></li>
+                <li><img src="images/star-yellow.svg" alt="star icon" /></li>
+                <li><img src="images/star-yellow.svg" alt="star icon" /></li>
+                <li><img src="images/star-yellow.svg" alt="star icon" /></li>
               </ul>
               <h3>Lorem ipsum</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique nec, ornare tellus ultrices praesent cras at odio scelerisque. Feugiat a in purus id tortor felis justo, amet vulputate</p>
@@ -568,17 +572,17 @@
                       <ul>
                         <li>
                           <a href="">
-                            <i class="fab fa-pinterest-p"></i>
+                            <img src="images/pinterest.svg" alt="pinterest icon" />
                           </a>
                         </li>
                         <li>
                           <a href="">
-                            <i class="fab fa-facebook-f"></i>
+                            <img src="images/fb-icon.svg" alt="fb icon" />
                           </a>
                         </li>
                         <li>
                           <a href="">
-                            <i class="fab fa-instagram"></i>
+                            <img src="images/insta-icon.svg" alt="instagram icon" />
                           </a>
                         </li>
                       </ul>
@@ -655,8 +659,9 @@
   </footer>
   <!-- End Footer  -->
 
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>

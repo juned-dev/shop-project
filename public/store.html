@@ -6,8 +6,7 @@
   <link rel="preload stylesheet" href="fonts/fonts.css" as="style" crossorigin="anonymous">
   <!-- Slick slider css -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-  <!-- fontawesome 5 css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous"/>
+  
   <!-- template custom css -->
   <link href="css/app.css" rel="stylesheet">
   
@@ -48,7 +47,9 @@
             <div class="header-middle-inner-wrapper">
                 <div class="header-logo-wrapper">
                   <!-- mobile nav toggler  -->
-                  <button class="nav-toggler" x-on:click="mobNav = ! mobNav"><i class="fas fa-bars"></i></button>
+                  <button class="nav-toggler" x-on:click="mobNav = ! mobNav">
+                    <img src="images/menu.png" alt="menu toggle icon" />
+                  </button>
                   <!-- mobile nav toggler  -->
                     <!-- <img src="images/shop-logo-sm.png" alt="shop logo" /> -->
                     <a href="">Shop Logo</a>
@@ -82,7 +83,9 @@
                     </button>
                     <div :class="open ? 'opacity-100' : 'z-[-1]'" class="header-search-wrapper" x-cloak>
                         <input class="header-search-input" type="text" placeholder="Search here.." />
-                        <button x-on:click="open = ! open" class="search-close"><i class="fas fa-times"></i></button>
+                        <button x-on:click="open = ! open" class="search-close">
+                          <img src="images/close.png" alt="close icon" />
+                        </button>
                     </div>
                   </li>
                   <li>
@@ -109,7 +112,7 @@
         
         <nav :class="mobNav ? 'left-0' : ''" class="header-main-navigation">
           <button x-on:click="mobNav = ! mobNav" class="nav-close">
-            <i class="fas fa-times"></i>
+            <img src="images/close-red.png" alt="close icon" />
           </button>
           <li>
             <a href="#">Alle Produkte</a>
@@ -292,107 +295,107 @@
 
   <!-- Start Footer  -->
   <footer class="pt-20 bg-gray-700">
-      <div class="container">
-          <div class="footer-top-wrapper">
-              <div class="footer-reviews-col">
+    <div class="container">
+        <div class="footer-top-wrapper">
+            <div class="footer-reviews-col">
+                  <h3 class="footer-title">
+                    Bewertungen
+                  </h3>
+                  <p>Über 10.000 Kunden vertrauen auf unsere Qualität. </p>
+
+                  <div class="footer-social-list">
                     <h3 class="footer-title">
-                      Bewertungen
+                      SOCIAL MEDIA
                     </h3>
-                    <p>Über 10.000 Kunden vertrauen auf unsere Qualität. </p>
+                    <ul>
+                      <li>
+                        <a href="">
+                          <img src="images/pinterest.svg" alt="pinterest icon" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="images/fb-icon.svg" alt="fb icon" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="images/insta-icon.svg" alt="instagram icon" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+            </div>
 
-                    <div class="footer-social-list">
-                      <h3 class="footer-title">
-                        SOCIAL MEDIA
-                      </h3>
-                      <ul>
-                        <li>
-                          <a href="">
-                            <i class="fab fa-pinterest-p"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="">
-                            <i class="fab fa-facebook-f"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="">
-                            <i class="fab fa-instagram"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-              </div>
+            <div class="footer-contact-col">
+                <h3 class="footer-title">
+                  Kontakt
+                </h3>
 
-              <div class="footer-contact-col">
-                  <h3 class="footer-title">
-                    Kontakt
-                  </h3>
+                <ul class="footer-list">
+                    <li>Telefon: 0234 567 897 0</li>
+                    <li>Mo-Fr 10:00 -18:30 Uhr<br>
+                      Sa 10:00 -18:00 Uhr</li>
+                      <li><a href="">Kontaktformular</a></li>
+                      <li><a href="">E-Mail schreiben</a></li>
+                </ul>
+            </div>
 
-                  <ul class="footer-list">
-                      <li>Telefon: 0234 567 897 0</li>
-                      <li>Mo-Fr 10:00 -18:30 Uhr<br>
-                        Sa 10:00 -18:00 Uhr</li>
-                        <li><a href="">Kontaktformular</a></li>
-                        <li><a href="">E-Mail schreiben</a></li>
-                  </ul>
-              </div>
+            <div class="footer-cat-col">
+                <h3 class="footer-title">
+                  Kategorien
+                </h3>
 
-              <div class="footer-cat-col">
-                  <h3 class="footer-title">
-                    Kategorien
-                  </h3>
+                <ul class="footer-list">
+                      <li><a href="">Alle Produkte</a></li>
+                      <li><a href="">Wohnen</a></li>
+                      <li><a href="">Unterwegs</a></li>
+                      <li><a href="">Küche</a></li>
+                      <li><a href="">Spiele</a></li>
+                      <li><a href="">Taschen</a></li>
+                      <li><a href="">Deko</a></li>
+                </ul>
+            </div>
 
-                  <ul class="footer-list">
-                        <li><a href="">Alle Produkte</a></li>
-                        <li><a href="">Wohnen</a></li>
-                        <li><a href="">Unterwegs</a></li>
-                        <li><a href="">Küche</a></li>
-                        <li><a href="">Spiele</a></li>
-                        <li><a href="">Taschen</a></li>
-                        <li><a href="">Deko</a></li>
-                  </ul>
-              </div>
+            <div class="footer-infos-col">
+                <h3 class="footer-title">
+                  Infos
+                </h3>
 
-              <div class="footer-infos-col">
-                  <h3 class="footer-title">
-                    Infos
-                  </h3>
+                <ul class="footer-list">
+                      <li><a href="">Impressum</a></li>
+                      <li><a href="">Widerrufsrecht</a></li>
+                      <li><a href="">AGB</a></li>
+                      <li><a href="">Liefer- & </a></li>
+                      <li><a href="">Zahlungsbedingungen</a></li>
+                      <li><a href="">Datenschutz</a></li>
+                </ul>
+            </div>
 
-                  <ul class="footer-list">
-                        <li><a href="">Impressum</a></li>
-                        <li><a href="">Widerrufsrecht</a></li>
-                        <li><a href="">AGB</a></li>
-                        <li><a href="">Liefer- & </a></li>
-                        <li><a href="">Zahlungsbedingungen</a></li>
-                        <li><a href="">Datenschutz</a></li>
-                  </ul>
-              </div>
-
-          </div>
-      </div>
-
-      <div class="footer-payment-options">
-          <div class="container">
-            <ul>
-              <li><img src="images/visa-card-logo.png" alt="visa-card-logo" /></li>
-              <li><img src="images/mastercard.png" alt="mastercard logo" /></li>
-              <li><img src="images/american-express.png" alt="american-express logo" /></li>
-              <li><img src="images/giro-pay.png" alt="giro-pay logo" /></li>
-              <li><img src="images/paypal-logo.png" alt="paypal-logo logo" /></li>
-              <li><img src="images/vorkasse.png" alt="vorkasse logo" /></li>
-              <li><img src="images/cash.png" alt="cash.png logo" /></li>
-            </ul>
         </div>
-      </div>
+    </div>
 
-      <div class="footer-copyright">
-          <div class="container">
-            <p>© 2021 </p>
-          </div>
+    <div class="footer-payment-options">
+        <div class="container">
+          <ul>
+            <li><img src="images/visa-card-logo.png" alt="visa-card-logo" /></li>
+            <li><img src="images/mastercard.png" alt="mastercard logo" /></li>
+            <li><img src="images/american-express.png" alt="american-express logo" /></li>
+            <li><img src="images/giro-pay.png" alt="giro-pay logo" /></li>
+            <li><img src="images/paypal-logo.png" alt="paypal-logo logo" /></li>
+            <li><img src="images/vorkasse.png" alt="vorkasse logo" /></li>
+            <li><img src="images/cash.png" alt="cash.png logo" /></li>
+          </ul>
       </div>
-  </footer>
-  <!-- End Footer  -->
+    </div>
+
+    <div class="footer-copyright">
+        <div class="container">
+          <p>© 2021 </p>
+        </div>
+    </div>
+</footer>
+<!-- End Footer  -->
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
