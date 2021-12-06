@@ -58,8 +58,8 @@ module.exports = {
          md: '0 3px 20px rgba(0, 0, 0, 0.10)',
        },
 
-       content:{
-         'right-arrow': '<i class="fas fa-chevron-right"></i>',
+       backgroundImage: {
+         'right-arrow': "url('/images/icon_arrow_right.svg')",
        }
     },
   },
